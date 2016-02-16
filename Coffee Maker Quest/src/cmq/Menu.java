@@ -6,7 +6,7 @@ import java.util.*;
 
 public class Menu {
 
-	private int current;
+	public int current;
 	public boolean coffee, cream, sugar;
 	ArrayList<String> inventory;
 	
@@ -24,15 +24,18 @@ public class Menu {
 	}
 	
 	//Moving to a new room
-	public void updateRoom(String d,Rooms map){
+	public int updateRoom(String d,Rooms map){
 		if(d.equalsIgnoreCase("N") && map.nRoomExist(current)){
 			current++;
+			return 1;
 		}
 		else if(d.equalsIgnoreCase("S") && map.sRoomExist(current)){
 			current--;
+			return -1;
 		}
 		else{
 			System.out.println("A door does not exist in that direction, please choose another way!");
+			return 0;
 		}
 	}
 	

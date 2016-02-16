@@ -46,7 +46,7 @@ public class Commands {
 		
 		//Moving north or south
 		if(c.equalsIgnoreCase("N") || c.equalsIgnoreCase("S")){
-            m.updateRoom(c, map);
+            int error = m.updateRoom(c, map);
         }
 		
 		

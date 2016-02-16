@@ -50,14 +50,9 @@ public class Rooms {
         itemList.put(roomDesc.get(5), "Sugar");
 	}
 	
-	//Does the room exist
-	public boolean roomExist(String s){
-		return roomDesc.contains(s);
-	}
-	
 	//Does the item exist
 	public boolean itemExist(int current){
-        return itemList.containsKey(roomDesc.get(current));       
+        return itemList.containsKey(roomDesc.get(current));
     }
 	
 	//Checks if a north room or door exists
