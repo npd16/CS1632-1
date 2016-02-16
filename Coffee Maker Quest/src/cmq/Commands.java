@@ -1,4 +1,6 @@
 package cmq;
+//By Nicholas Carone & Nicholas DeFranco
+//Deliverable 2
 
 import java.util.*;
 
@@ -6,7 +8,8 @@ public class Commands {
 
 	private ArrayList<String> commands;
 	
-	public Commands(){
+	//Constructor that adds the valid commands
+	public Commands(){ 
 		commands = new ArrayList<String>();
 		commands.add("N");
 		commands.add("S");
@@ -16,10 +19,12 @@ public class Commands {
 		commands.add("D");
 	}
 	
+	//checks to see if input was valid command
 	public boolean validCommand(String c){
 		return commands.contains(c.toUpperCase());
 	}
 	
+	//printing out help
 	public void printHelp(){
 		System.out.println("Command List:");
 		System.out.println("N: Move north if a northern door exists.");
@@ -30,16 +35,21 @@ public class Commands {
 		System.out.println("D: Drink the finished cup of coffee if you possess all the ingredients.");
 	}
 	
+	//Response for invalid command
 	public void printInvalid(){
 		System.out.println("What?");
 	}
 	
+	//Command Handler
 	public void doCommand(String c, Rooms map, Menu m){
 		int current = m.getRoom();
 		
+		//Moving north or south
 		if(c.equalsIgnoreCase("N") || c.equalsIgnoreCase("S")){
             m.updateRoom(c, map);
         }
+		
+		
 		else if(c.equalsIgnoreCase("L")){
             // Check to see if there is something in this room
             if(map.itemExist(current)){
@@ -52,12 +62,15 @@ public class Commands {
                 System.out.println("You don't see anything out of the ordinary.");
             }
         }
+		//Checks inventory
 		else if(c.equalsIgnoreCase("I")){
             m.printInventory();
         }
+		//prints help
 		else if(c.equalsIgnoreCase("H")){
             printHelp();
         }
+		//checks what is in the inventory and gives appropriate response for the given ingedients
 		else if(c.equalsIgnoreCase("D")){
 				m.printInventory();
 				System.out.println("");

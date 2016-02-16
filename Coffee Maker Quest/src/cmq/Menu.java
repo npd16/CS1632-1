@@ -1,4 +1,6 @@
 package cmq;
+//By Nicholas Carone & Nicholas DeFranco
+//Deliverable 2
 
 import java.util.*;
 
@@ -16,10 +18,12 @@ public class Menu {
 		sugar = false;;
 	}
 	
+	//Get current room
 	public int getRoom(){
 		return current;
 	}
 	
+	//Moving to a new room
 	public void updateRoom(String d,Rooms map){
 		if(d.equalsIgnoreCase("N") && map.nRoomExist(current)){
 			current++;
@@ -32,10 +36,12 @@ public class Menu {
 		}
 	}
 	
+	//Add item to the inventory
 	public void addItem(String item){
         inventory.add(item);
     }
 	
+	//Printing out inventory
 	public void printInventory(){ 
 		//It'll check the ingredients in inventory and print them out accordingly
         for(String str : inventory){

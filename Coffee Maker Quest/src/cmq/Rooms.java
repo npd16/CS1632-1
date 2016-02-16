@@ -1,4 +1,6 @@
 package cmq;
+//By Nicholas Carone & Nicholas DeFranco
+//Deliverable 2
 
 import java.util.ArrayList;
 import java.util.HashMap;
