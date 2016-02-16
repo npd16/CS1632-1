@@ -1,2 +1,7 @@
 # CS1632
-Deliverable 2
+DELIVERABLE 2: Unit Testing and Code Coverage
+
+Nicholas DeFranco
+
+Nicholas Carone
+
