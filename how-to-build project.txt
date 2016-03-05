@@ -1,0 +1,1 @@
+The Coffee Maker Quest folder contains a src folder of Java files and a bin folder containing class files.  The program was created and compiled using Eclipse and can be compiled again using Eclipse or another IDE.
